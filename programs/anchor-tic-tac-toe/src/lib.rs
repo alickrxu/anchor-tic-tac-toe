@@ -2,6 +2,9 @@ use anchor_lang::prelude::*;
 use num_derive::*;
 use num_traits::*;
 
+pub mod errors;
+use errors::TicTacToeError;
+
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
 #[program]
@@ -145,14 +148,6 @@ impl Game {
 pub struct Tile {
     row: u8,
     column: u8
-}
-
-#[error_code]
-pub enum TicTacToeError {
-    TileOutOfBounds,
-    TileAlreadySet,
-    GameAlreadyOver,
-    NotPlayersTurn,
 }
 
 #[derive(AnchorSerialize, AnchorDeserialize, Clone, PartialEq, Eq)]
