@@ -6,7 +6,7 @@ pub mod errors;
 pub mod state;
 pub mod instructions;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("HmAcuqLYqHf1d2KSXxiYj4bMNDdNm64hbg5hqEKCYi8Y");
 
 #[program]
 pub mod anchor_tic_tac_toe {
